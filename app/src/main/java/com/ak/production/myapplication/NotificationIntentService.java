@@ -67,6 +67,10 @@ public class NotificationIntentService extends Service {
                 leftHandler.post(new Runnable() {
                     @Override
                     public void run() {
+                        if(player.isPlaying())
+                            player.pause();
+                        else
+                            player.start();
                         Toast.makeText(getBaseContext(), "You clicked the left button", Toast.LENGTH_LONG).show();
                     }
                 });
@@ -76,6 +80,10 @@ public class NotificationIntentService extends Service {
                 rightHandler.post(new Runnable() {
                     @Override
                     public void run() {
+                        if(player.isPlaying())
+                            player.pause();
+                        else
+                            player.start();
                         Toast.makeText(getBaseContext(), "You clicked the right button", Toast.LENGTH_LONG).show();
                     }
                 });
