@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView imageViewCompat;
     Button btnStart,btnStop;
 
+    //
     NotificationIntentService notificationIntentService;
 
     @Override
